@@ -13,9 +13,9 @@ class Main{
 
     public static void flipNHeads(int n){
         int headsNumRow = 0 ;
-        int flipsNum = 0 ;
+        int NUM = 0 ;
         while(headsNumRow<n){
-            flipsNum++;
+            NUM++;
             if(Math.random() < 0.5){
                 System.out.println("tails");
                 headsNumRow = 0;
@@ -25,13 +25,13 @@ class Main{
                 headsNumRow ++ ;
             }
         }
-        String wordFlip = " flips" ;
-        String wordHead = " heads";
-        if(flipsNum<=1) {
-            wordFlip = " flip";
-            wordHead = " head";
+        String FLIP = " flips" ;
+        String HEAD = " heads";
+        if(NUM<=1) {
+            FLIP = " flip";
+            HEAD = " head";
         }
-        System.out.println("It took " + flipsNum + wordFlip + " to flip " + n + wordHead + " in a row.");
+        System.out.println("It took " + NUM + FLIP + " to flip " + n + HEAD + " in a row.");
     }
 
     public static void clock(){
