@@ -47,6 +47,49 @@ class basiclib{
         return arr[indexRow];
     }
 
+    //HashSet<String> set=new HashSet();
+    //set.add(item)
+    public static String weatherData(int[][] arr){
+        Set<Integer> set = new HashSet<Integer>();
+        for (int i = 0 ; i < arr.length ; i++){
+            for (Integer j : arr[i]){
+                set.add(j);
+            }
+        }
+        String lowValue = "\nLow: " + Collections.min(set);
+        String highValue = "High: " + Collections.max(set);
+        String neverFound = "";
+        for (int i =  Collections.min(set); i < Collections.max(set) ; i++){
+            if (!set.contains(i)){
+                neverFound += "\nNever saw temperature: " + i;
+            }
+        }
+        String str = highValue + lowValue + neverFound;
+        return str;
+        //Or
+        //return highValue + lowValue + neverFound;
+    }
+
+    public static String tally(List<String> votes) {
+        int maxVote=0;
+        int countVoteOfItem =0;
+        String word="";
+        for(int i = 0; i < votes.size(); i++){
+            countVoteOfItem = 1;
+            for(int j = i+1; j < votes.size(); j++){
+                if(votes.get(i).equals(votes.get(j))){
+                    countVoteOfItem++;
+                }
+            }
+            if(countVoteOfItem > maxVote){
+                maxVote = countVoteOfItem;
+                word = votes.get(i);
+            }
+        }
+        return  word ;
+    }
+
+
     public static void main(String[] args){
         System.out.println("Hello Lab2!");
         System.out.println(Arrays.toString(roll(5)));
@@ -62,5 +105,33 @@ class basiclib{
                 {65, 56, 55, 52, 55, 62, 57}
         };
         System.out.println(Arrays.toString((Arrays_of_Arrays(weeklyMonthTemperatures))));
+        System.out.println((weatherData(weeklyMonthTemperatures)));
+
+
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+
+        String winner = tally(votes);
+        System.out.println(winner + " received the most votes!");
+
+        /*
+        votes.add("Ali");
+        votes.add("Ali");
+        votes.add("Ali");
+        votes.add("Ali");
+        votes.add("Ali");
+        votes.add("Ali");
+        votes.add("Ali");
+
+        winner = tally(votes);
+        System.out.println(winner + " received the most votes!");*/
     }
 }
