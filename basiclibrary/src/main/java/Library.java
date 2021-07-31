@@ -122,16 +122,5 @@ class Library{
         String winner = tally(votes);
         System.out.println(winner + " received the most votes!");
 
-        /*
-        votes.add("Ali");
-        votes.add("Ali");
-        votes.add("Ali");
-        votes.add("Ali");
-        votes.add("Ali");
-        votes.add("Ali");
-        votes.add("Ali");
-
-        winner = tally(votes);
-        System.out.println(winner + " received the most votes!");*/
     }
 }
