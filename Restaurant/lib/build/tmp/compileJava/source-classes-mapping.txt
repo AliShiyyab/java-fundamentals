@@ -1,8 +1,14 @@
-Inheritance/Library.java
- Inheritance.Library
+Inheritance/outPutInterFace.java
+ Inheritance.outPutInterFace
 Inheritance/Restaurant.java
  Inheritance.Restaurant
+Inheritance/toStringInterFace.java
+ Inheritance.toStringInterFace
+Inheritance/Library.java
+ Inheritance.Library
 Inheritance/Review.java
  Inheritance.Review
 Inheritance/Shop.java
  Inheritance.Shop
+Inheritance/Theater.java
+ Inheritance.Theater

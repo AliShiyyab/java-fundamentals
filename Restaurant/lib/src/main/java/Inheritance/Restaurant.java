@@ -12,11 +12,11 @@ public class Restaurant extends Review implements toStringInterFace,outPutInterF
     HashMap<String, ArrayList<String>> resturantMap =new HashMap<>();
     ArrayList<String> resturantList = new ArrayList<>();
 
-    public Restaurant(String resName , int restStartNumber , int priceCategory){
+    /*public Restaurant(String resName , int restStartNumber , int priceCategory){
         this.resName = resName;
         this.restStartNumber = restStartNumber;
         this.priceCategory = priceCategory;
-    }
+    }*/
 
     public String getName(){
         return resName;
@@ -44,8 +44,8 @@ public class Restaurant extends Review implements toStringInterFace,outPutInterF
         }
     }
 
-    public Restaurant(String body, String author, int stars,HashMap all) {
-        super(body,author, stars,all );
+    public Restaurant(String body, String author, int stars) {
+        super(body,author, stars );
         this.all=all;
     }
 

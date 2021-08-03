@@ -11,35 +11,19 @@ import static org.junit.jupiter.api.Assertions.*;
 * */
 
 public class LibraryTest {
-    @Test public void checkConstructor (){
-        Restaurant test = new Restaurant("Nour AlDeen" , 5 , 50);
-        assertEquals("Nour AlDeen",test.getName());
-        assertEquals(5 , test.getStar());
-        assertEquals(50 , test.getPrice());
-    }
 
-    @Test public void CheckConstructorReview(){
-        Review test = new Review("Very Good" , "Ali" , 5);
-        assertEquals("Very Good" , test.getauthor());
-        assertEquals("Ali" , test.getbody());
-        assertEquals(5 , test.getStar());
+    @Test public void addReviewTest(){
+        Review rev1 = new Restaurant("good","Judy",0);
+        Restaurant reviewCasting = (Restaurant) rev1;
+        reviewCasting.setName("Zanjabeel");
+        assertEquals ("{Zanjabeel=[Judy, good, 0]}","{"+reviewCasting.getName()+"=["+reviewCasting.getbody()+", "+reviewCasting.getauthor()+", "+reviewCasting.getStar()+"]}");
     }
-
-    @Test public void toStringTest(){
-        Review test = new Review("Ali","Excelent",5);
-        assertEquals("the Customers Ali voted 5 stars Excelent" , test.toString());
-    }
-
-    @Test public void toStringTestResturant(){
-        Restaurant test = new Restaurant("Ali", 4, 35);
-        assertEquals("Restaurant{resName='Ali', restStartNumber=4, priceCategory=35}" , test.toString());
-    }
-
-    @Test public void testShop(){
-        Shop shop = new Shop();
-        assertEquals("Shop{shopName='Cake Shop', shopDescribe='Very Good', numOfDollar=5}" , shop.toString());
-        Shop test = new Shop("Jubran resturant","Excellent", "10");
-        assertEquals("Shop{shopName='Jubran resturant', shopDescribe='Excellent', numOfDollar=10}" , test.toString());
+    @Test public void testtoStringResturant() {
+        Restaurant resturantTest = new Restaurant("Excelent","mahmood",4);
+        resturantTest.setName("shawrma of Street");
+        resturantTest.setStar(4);
+        resturantTest.setPrice(35);
+        assertEquals("the Customers "+resturantTest.getauthor() + " voted " +resturantTest.getStar() +" stars " + resturantTest.getbody() , resturantTest.tostring());
     }
 
 }

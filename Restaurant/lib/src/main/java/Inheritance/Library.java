@@ -7,7 +7,7 @@ public class Library {
 
     public static void main(String[] args){
         System.out.println("Library Class");
-        Restaurant resturant1 = new Restaurant("Ali Akef" , 5 , 50);
+        Restaurant resturant1 = new Restaurant("Good" , "Ali" , 50);
         System.out.println(resturant1);
         }
 }
