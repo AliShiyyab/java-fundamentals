@@ -8,7 +8,6 @@ public class Restaurant {
     private int restStartNumber;
     private int priceCategory;
     private ArrayList<Review> arr;
-
     public Restaurant(String resName , int restStartNumber , int priceCategory){
         this.resName = resName;
         this.restStartNumber = restStartNumber;
@@ -50,7 +49,6 @@ public class Restaurant {
                 ", priceCategory=" + priceCategory +
                 '}';
     }
-
     public void addReview(Review review){
         this.arr.add(review);
     }
