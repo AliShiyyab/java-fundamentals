@@ -2,18 +2,20 @@ package Inheritance;
 
 import java.lang.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Restaurant {
+public class Restaurant extends Review implements toStringInterFace,outPutInterFace {
     private String resName;
     private int restStartNumber;
     private int priceCategory;
-    private ArrayList<Review> arr;
+    private HashMap<String, HashMap<String,ArrayList<String>>> all;
+    HashMap<String, ArrayList<String>> resturantMap =new HashMap<>();
+    ArrayList<String> resturantList = new ArrayList<>();
 
     public Restaurant(String resName , int restStartNumber , int priceCategory){
         this.resName = resName;
         this.restStartNumber = restStartNumber;
         this.priceCategory = priceCategory;
-        this.arr = new ArrayList<Review>();
     }
 
     public String getName(){
@@ -42,6 +44,11 @@ public class Restaurant {
         }
     }
 
+    public Restaurant(String body, String author, int stars,HashMap all) {
+        super(body,author, stars,all );
+        this.all=all;
+    }
+
     @Override
     public String toString() {
         return "Restaurant{" +
@@ -52,6 +59,16 @@ public class Restaurant {
     }
 
     public void addReview(Review review){
-        this.arr.add(review);
+
+        resturantList.add(review.getauthor());
+        resturantList.add(review.getbody());
+        resturantList.add(String.valueOf(review.getStar()));
+        resturantList.add("-->");
+        OutPut();
+    }
+
+    @Override
+    public void OutPut() {
+
     }
 }
