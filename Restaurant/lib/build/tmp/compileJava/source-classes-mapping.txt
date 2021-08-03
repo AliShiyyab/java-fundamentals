@@ -4,3 +4,5 @@ Inheritance/Restaurant.java
  Inheritance.Restaurant
 Inheritance/Review.java
  Inheritance.Review
+Inheritance/Shop.java
+ Inheritance.Shop
