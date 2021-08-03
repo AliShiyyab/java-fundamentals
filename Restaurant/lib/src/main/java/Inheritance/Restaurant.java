@@ -13,6 +13,9 @@ public class Restaurant extends Review implements toStringInterFace,outPutInterF
     ArrayList<String> resturantList = new ArrayList<>();
 
     /*public Restaurant(String resName , int restStartNumber , int priceCategory){
+    private ArrayList<Review> arr;
+    public Restaurant(String resName , int restStartNumber , int priceCategory){
+
         this.resName = resName;
         this.restStartNumber = restStartNumber;
         this.priceCategory = priceCategory;
@@ -57,7 +60,6 @@ public class Restaurant extends Review implements toStringInterFace,outPutInterF
                 ", priceCategory=" + priceCategory +
                 '}';
     }
-
     public void addReview(Review review){
 
         resturantList.add(review.getauthor());
@@ -67,8 +69,10 @@ public class Restaurant extends Review implements toStringInterFace,outPutInterF
         OutPut();
     }
 
+
     @Override
     public void OutPut() {
 
     }
-}
+}}
+
